@@ -1,5 +1,5 @@
 
-import { Download, Play, Star, Smartphone, Monitor, Tv, CheckCircle, Zap, Heart, Users } from 'lucide-react';
+import { Download, Play, Star, Smartphone, CheckCircle, Zap, Heart, Users, Monitor, Tv } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -102,29 +102,56 @@ const Index = () => {
               </div>
             </div>
             <div className="animate-scale-up">
-              <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-red-600/30 rounded-3xl blur-3xl"></div>
-                <div className="relative bg-card/30 backdrop-blur-sm border border-border/30 rounded-3xl p-8">
-                  <div className="grid grid-cols-2 gap-4">
-                    {[
-                      { title: "Avengers: Endgame", rating: "9.2", image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=300&h=400&fit=crop" },
-                      { title: "Breaking Bad", rating: "9.5", image: "https://images.unsplash.com/photo-1489599663699-bfd42e5e4b4c?w=300&h=400&fit=crop" },
-                      { title: "The Dark Knight", rating: "9.0", image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=300&h=400&fit=crop" },
-                      { title: "Stranger Things", rating: "8.8", image: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=300&h=400&fit=crop" }
-                    ].map((item, index) => (
-                      <div key={index} className="content-card p-3">
-                        <img 
-                          src={item.image} 
-                          alt={item.title}
-                          className="w-full h-32 object-cover rounded-lg mb-2"
-                        />
-                        <h4 className="font-semibold text-sm truncate">{item.title}</h4>
-                        <div className="flex items-center mt-1">
-                          <Star className="w-3 h-3 text-yellow-500 mr-1" />
-                          <span className="text-xs text-foreground/70">{item.rating}</span>
+              <div className="relative flex justify-center">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-red-600/30 rounded-3xl blur-3xl scale-75"></div>
+                <div className="relative">
+                  {/* Smartphone Mockup */}
+                  <div className="w-64 h-[480px] bg-gradient-to-b from-slate-900 to-slate-800 rounded-[2.5rem] p-2 shadow-2xl">
+                    {/* Phone Frame */}
+                    <div className="w-full h-full bg-background rounded-[2rem] overflow-hidden relative">
+                      {/* Status Bar */}
+                      <div className="flex justify-between items-center px-6 py-3 text-xs text-foreground/70">
+                        <span>9:41</span>
+                        <div className="flex space-x-1">
+                          <div className="w-4 h-2 bg-foreground/30 rounded-sm"></div>
+                          <div className="w-6 h-2 bg-primary rounded-sm"></div>
                         </div>
                       </div>
-                    ))}
+                      
+                      {/* App Header */}
+                      <div className="px-4 pb-4">
+                        <div className="flex items-center justify-between mb-4">
+                          <img 
+                            src="/lovable-uploads/33ede6fd-2b3a-46e3-8c0e-9936b66dc3a5.png" 
+                            alt="StreamTV" 
+                            className="h-8 w-auto"
+                          />
+                          <div className="w-8 h-8 bg-foreground/10 rounded-full"></div>
+                        </div>
+                        
+                        {/* Featured Content */}
+                        <div className="bg-gradient-to-r from-primary/20 to-red-600/20 rounded-xl p-4 mb-4">
+                          <div className="w-full h-24 bg-foreground/20 rounded-lg mb-2"></div>
+                          <div className="flex items-center justify-between">
+                            <div>
+                              <div className="w-20 h-3 bg-foreground/40 rounded mb-1"></div>
+                              <div className="flex items-center">
+                                <Star className="w-3 h-3 text-yellow-500 mr-1" />
+                                <div className="w-8 h-2 bg-foreground/30 rounded"></div>
+                              </div>
+                            </div>
+                            <div className="w-16 h-8 bg-primary/80 rounded-full"></div>
+                          </div>
+                        </div>
+                        
+                        {/* Content Grid */}
+                        <div className="grid grid-cols-3 gap-2">
+                          {[1, 2, 3, 4, 5, 6].map((item) => (
+                            <div key={item} className="aspect-[3/4] bg-foreground/20 rounded-lg"></div>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -163,11 +190,6 @@ const Index = () => {
                 description: "Assista em quantos dispositivos quiser, simultaneamente"
               },
               {
-                icon: <Smartphone className="w-8 h-8" />,
-                title: "Multi-Plataforma",
-                description: "Android, iOS, Smart TV, computador e muito mais"
-              },
-              {
                 icon: <Monitor className="w-8 h-8" />,
                 title: "Qualidade HD/4K",
                 description: "Desfrute de conteúdo em alta definição"
@@ -192,39 +214,57 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Content Preview */}
+      {/* Content Statistics */}
       <section className="py-20 bg-card/20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-              Catálogo <span className="gradient-text">Gigantesco</span>
+              Conteúdo <span className="gradient-text">Infinito</span>
             </h2>
             <p className="text-xl text-foreground/80">
-              Milhares de filmes, séries e documentários atualizados diariamente
+              Milhares de títulos atualizados diariamente para você
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { category: "Ação", count: "2,847", image: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=400&h=600&fit=crop" },
-              { category: "Drama", count: "1,932", image: "https://images.unsplash.com/photo-1489599663699-bfd42e5e4b4c?w=400&h=600&fit=crop" },
-              { category: "Comédia", count: "1,654", image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=600&fit=crop" },
-              { category: "Ficção", count: "987", image: "https://images.unsplash.com/photo-1574267432553-4b4628081c31?w=400&h=600&fit=crop" }
-            ].map((category, index) => (
-              <div key={index} className="content-card glow-effect group overflow-hidden animate-fade-in">
-                <div className="relative">
-                  <img 
-                    src={category.image} 
-                    alt={category.category}
-                    className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
-                    <h3 className="text-2xl font-bold mb-1">{category.category}</h3>
-                    <p className="text-foreground/70">{category.count} títulos</p>
+              { 
+                title: "Mais de 16.000", 
+                subtitle: "Filmes", 
+                icon: <Monitor className="w-12 h-12" />,
+                gradient: "from-blue-500/20 to-purple-600/20"
+              },
+              { 
+                title: "Mais de 8.500", 
+                subtitle: "Séries", 
+                icon: <Tv className="w-12 h-12" />,
+                gradient: "from-green-500/20 to-teal-600/20"
+              },
+              { 
+                title: "Mais de 2.300", 
+                subtitle: "Documentários", 
+                icon: <Play className="w-12 h-12" />,
+                gradient: "from-orange-500/20 to-red-600/20"
+              },
+              { 
+                title: "Mais de 1.200", 
+                subtitle: "Animes", 
+                icon: <Star className="w-12 h-12" />,
+                gradient: "from-pink-500/20 to-purple-600/20"
+              }
+            ].map((stat, index) => (
+              <Card key={index} className="content-card glow-effect group overflow-hidden animate-fade-in hover:scale-105 transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className={`absolute inset-0 bg-gradient-to-br ${stat.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-300`}></div>
+                  <div className="relative z-10">
+                    <div className="text-primary mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                      {stat.icon}
+                    </div>
+                    <h3 className="text-3xl font-bold mb-2 gradient-text">{stat.title}</h3>
+                    <p className="text-foreground/70 text-lg">{stat.subtitle}</p>
                   </div>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
@@ -239,41 +279,48 @@ const Index = () => {
                 Baixe <span className="gradient-text">Agora</span>
               </h2>
               <p className="text-xl text-foreground/80 mb-12">
-                Disponível para todas as plataformas. Escolha a sua e comece a assistir!
+                Faça o download do APK e comece a assistir seus filmes e séries favoritos gratuitamente!
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {[
-                { platform: "Android", icon: <Smartphone className="w-8 h-8" />, description: "Google Play Store" },
-                { platform: "iOS", icon: <Smartphone className="w-8 h-8" />, description: "App Store" },
-                { platform: "Windows", icon: <Monitor className="w-8 h-8" />, description: "PC Desktop" },
-                { platform: "Smart TV", icon: <Tv className="w-8 h-8" />, description: "Android TV" },
-                { platform: "Web App", icon: <Monitor className="w-8 h-8" />, description: "Navegador" },
-                { platform: "APK Direto", icon: <Download className="w-8 h-8" />, description: "Download Direto" }
-              ].map((platform, index) => (
-                <Card key={index} className="content-card glow-effect group cursor-pointer animate-scale-up hover:scale-105 transition-all duration-300">
-                  <CardContent className="p-6 text-center">
-                    <div className="text-primary mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
-                      {platform.icon}
+            <div className="max-w-md mx-auto mb-12">
+              <Card className="content-card glow-effect group cursor-pointer animate-scale-up hover:scale-105 transition-all duration-300">
+                <CardContent className="p-8 text-center">
+                  <div className="text-primary mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
+                    <Download className="w-16 h-16" />
+                  </div>
+                  <h3 className="text-2xl font-bold mb-4">StreamTV APK</h3>
+                  <p className="text-foreground/70 mb-6">
+                    Versão mais recente com todos os recursos premium desbloqueados
+                  </p>
+                  <div className="space-y-2 text-sm text-foreground/60 mb-6">
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      Arquivo seguro e verificado
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">{platform.platform}</h3>
-                    <p className="text-foreground/70 text-sm">{platform.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      Atualização automática
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                      Sem vírus ou malware
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
 
             <div className="space-y-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-xl px-12 py-8 glow-effect transform hover:scale-105 transition-all duration-300"
+                className="bg-primary hover:bg-primary/90 text-xl px-16 py-8 glow-effect transform hover:scale-105 transition-all duration-300"
               >
                 <Download className="w-8 h-8 mr-4" />
                 Download Gratuito - APK
               </Button>
               <p className="text-foreground/60 text-sm">
-                Arquivo seguro • Sem vírus • Atualização automática
+                Compatível com Android 5.0+ • Tamanho: 45MB
               </p>
             </div>
           </div>
