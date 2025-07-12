@@ -1,7 +1,6 @@
 
 import { Download } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { MobileMenu } from '@/components/MobileMenu';
 
 interface NavigationProps {
   scrollToSection: (id: string) => void;
@@ -41,17 +40,14 @@ export const Navigation = ({ scrollToSection }: NavigationProps) => {
           </button>
         </div>
         
-        {/* Desktop Download Button */}
+        {/* Download Button - Now visible on all screen sizes */}
         <Button 
           onClick={() => scrollToSection('download')}
-          className="hidden md:flex bg-primary hover:bg-primary/90"
+          className="bg-primary hover:bg-primary/90 text-sm px-4 py-2 md:text-base md:px-6 md:py-3"
         >
           <Download className="w-4 h-4 mr-2" />
           Baixar App
         </Button>
-
-        {/* Mobile Menu */}
-        <MobileMenu scrollToSection={scrollToSection} />
       </div>
     </nav>
   );
