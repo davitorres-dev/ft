@@ -21,7 +21,7 @@ export const FeaturesSection = () => {
     },
     {
       icon: <Monitor className="w-8 h-8" />,
-      title: "Qualidade HD/4K",
+      title: "Qualidade HD",
       description: "Desfrute de conteúdo em alta definição"
     }
   ];

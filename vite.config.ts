@@ -19,4 +19,13 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        entryFileNames: `assets/index-C5Y2Z2V2.js`,
+        chunkFileNames: `assets/[name]-C5Y2Z2V2.js`,
+        assetFileNames: `assets/[name]-CRTlRTPa[extname]`,
+      },
+    },
+ },
 }));

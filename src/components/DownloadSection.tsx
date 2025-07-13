@@ -23,7 +23,7 @@ export const DownloadSection = () => {
                 <div className="text-primary mb-4 lg:mb-6 flex justify-center group-hover:scale-110 transition-transform duration-300">
                   <Download className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16" />
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">StreamTV APK</h3>
+                <h3 className="text-xl lg:text-2xl font-bold mb-3 lg:mb-4">FilserTV APK</h3>
                 <p className="text-sm sm:text-base text-foreground/70 mb-4 lg:mb-6">
                   Versão mais recente com todos os recursos premium desbloqueados
                 </p>
@@ -49,12 +49,13 @@ export const DownloadSection = () => {
             <Button 
               size="lg" 
               className="bg-primary hover:bg-primary/90 text-base sm:text-lg lg:text-xl px-8 sm:px-12 lg:px-16 py-4 sm:py-6 lg:py-8 glow-effect transform hover:scale-105 transition-all duration-300 w-full max-w-sm sm:max-w-md mx-auto"
+              onClick={() => window.open('https://filsertv.com/filsertv.apk', '_blank')}
             >
               <Download className="w-6 h-6 lg:w-8 lg:h-8 mr-3 lg:mr-4" />
               Download Gratuito - APK
             </Button>
             <p className="text-foreground/60 text-xs sm:text-sm">
-              Compatível com Android 5.0+ • Tamanho: 45MB
+              Compatível com Android 5.0+ • Tamanho: 12MB
             </p>
           </div>
         </div>

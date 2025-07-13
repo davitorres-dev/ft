@@ -11,13 +11,13 @@ export const Footer = () => {
               className="h-10 w-auto"
             />
             <div>
-              <p className="font-semibold">StreamTV</p>
+              <p className="font-semibold">FilserTV</p>
               <p className="text-sm text-foreground/60">Entretenimento Gratuito</p>
             </div>
           </div>
           <div className="text-center md:text-right">
             <p className="text-foreground/60 text-sm">
-              © 2024 StreamTV. Todos os direitos reservados.
+              © 2024 FilserTV. Todos os direitos reservados.
             </p>
             <p className="text-foreground/40 text-xs mt-1">
               100% Gratuito • Sem Limites • Para Sempre

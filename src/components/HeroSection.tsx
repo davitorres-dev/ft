@@ -54,11 +54,11 @@ export const HeroSection = ({ scrollToSection }: HeroSectionProps) => {
               </div>
               <div className="flex items-center">
                 <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
-                HD Quality
+                Qualidade HD
               </div>
             </div>
           </div>
-          <div className="animate-scale-up order-first lg:order-last">
+          <div className="animate-scale-up order-last">
             <div className="relative flex justify-center">
               <div className="absolute inset-0 bg-gradient-to-r from-primary/30 to-red-600/30 rounded-3xl blur-3xl scale-75"></div>
               <div className="relative">
