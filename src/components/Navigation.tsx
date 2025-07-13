@@ -12,8 +12,8 @@ export const Navigation = ({ scrollToSection }: NavigationProps) => {
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center space-x-2">
           <img 
-            src="/lovable-uploads/33ede6fd-2b3a-46e3-8c0e-9936b66dc3a5.png" 
-            alt="StreamTV Logo" 
+            src="https://www.filsertv.com/wp-content/uploads/2024/12/LOGO-APP.png" 
+            alt="FilserTV Logo" 
             className="h-8 sm:h-12 w-auto"
           />
         </div>

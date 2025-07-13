@@ -6,8 +6,8 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between">
           <div className="flex items-center space-x-4 mb-4 md:mb-0">
             <img 
-              src="/lovable-uploads/33ede6fd-2b3a-46e3-8c0e-9936b66dc3a5.png" 
-              alt="StreamTV Logo" 
+              src="https://www.filsertv.com/wp-content/uploads/2024/12/LOGO-APP.png" 
+              alt="FilserTV Logo" 
               className="h-10 w-auto"
             />
             <div>
